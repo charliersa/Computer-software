@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>電腦軟體應用 丙級 — 學科線上測驗</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="root">
+  <div style="min-height:100vh;display:grid;place-items:center;color:#64748b;font-family:'Noto Sans TC',sans-serif;">
+    <div style="text-align:center;">
+      <div style="width:46px;height:46px;border:4px solid #e2e8f0;border-top-color:#1f6fb2;border-radius:50%;margin:0 auto 16px;animation:spin .8s linear infinite;"></div>
+      <div style="font-weight:700;color:#0b2545;">載入題庫中…</div>
+    </div>
+  </div>
+</div>
+<style>@keyframes spin{to{transform:rotate(360deg)}}</style>
+
+<template id="__bundler_thumbnail">
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100" height="100" rx="20" fill="#0b2545"/>
+    <g transform="translate(30,30)" fill="none" stroke="#5aa8e0" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="0" y="2" width="40" height="28" rx="3"/>
+      <path d="M-4 36h48"/>
+      <path d="M9 12l5 5-5 5"/>
+      <path d="M22 22h9"/>
+    </g>
+  </svg>
+</template>
+
+<!-- libs -->
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<!-- data -->
+<script src="questions.js"></script>
+
+<!-- app modules -->
+<script type="text/babel" src="components.jsx"></script>
+<script type="text/babel" src="chrome.jsx"></script>
+<script type="text/babel" src="launchers.jsx"></script>
+<script type="text/babel" src="home.jsx"></script>
+<script type="text/babel" src="quiz_parts.jsx"></script>
+<script type="text/babel" src="quiz.jsx"></script>
+<script type="text/babel" src="results.jsx"></script>
+<script type="text/babel" src="app.jsx"></script>
+<script type="text/babel" data-presets="react">
+  window.startReactApp();
+</script>
+</body>
+</html>
